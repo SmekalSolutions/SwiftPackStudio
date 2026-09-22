@@ -1,0 +1,157 @@
+END USER LICENSE AGREEMENT (EULA)
+
+SwiftPack Studio
+Published by Smekal Solutions ("Licensor", "we", "us")
+
+Effective date: 20th September 2026
+Version: 1.0
+
+Please read this Agreement carefully. By installing or using SwiftPack Studio (the "Software"), you ("User", "you") agree to be bound by the terms below. If you do not agree, do not install or use the Software.
+
+1. FREE LICENSE GRANT
+
+SwiftPack Studio is provided free of charge.
+
+Subject to your compliance with this Agreement, Licensor grants you a free, non-exclusive, non-transferable right to install and use the Software for personal, educational, research, evaluation, internal business, and professional-service purposes.
+
+No software license fee, subscription fee, trial fee, or activation fee is required to use SwiftPack Studio.
+
+Commercial organizations, enterprises, IT service providers, consulting companies, system integrators, managed service providers, outsourcing companies, and application packaging companies may use SwiftPack Studio without obtaining prior permission from Smekal Solutions and without paying a software license fee.
+
+2. COMMERCIAL AND PROFESSIONAL SERVICE USE
+
+You may use SwiftPack Studio as a tool to provide paid professional services to your own customers or clients. You may charge your customers for your professional services.
+
+For example, XYZ (e.g., a service provider or company name) may use SwiftPack Studio to provide application packaging services to PQR (e.g., a customer or company name). XYZ may charge PQR for XYZ's application packaging services.
+
+XYZ does not need separate permission from Smekal Solutions or need to pay a SwiftPack Studio software license fee merely because XYZ uses SwiftPack Studio to provide those services.
+
+As part of those application packaging services, XYZ may install SwiftPack Studio on authorized XYZ computers or, where the service is performed in the customer environment, on authorized PQR computers or other authorized customer environments, without obtaining separate permission from Smekal Solutions.
+
+Purchasing technical support from Smekal Solutions is recommended but is optional and is not a condition for using SwiftPack Studio under this Agreement.
+
+This permission does not allow a service provider to sell, sublicense, or redistribute SwiftPack Studio itself.
+
+3. OFFICIAL SOFTWARE DISTRIBUTION
+
+Smekal Solutions may distribute official SwiftPack Studio releases through the official Smekal Solutions website, or other channels designated by Smekal Solutions.
+
+The official Windows installer may be provided as a downloadable SwiftPackStudio-Setup-*.exe or another installer format.
+
+Customers are encouraged to obtain SwiftPack Studio from the official Smekal Solutions website or official GitHub release channels.
+
+Smekal Solutions may digitally sign official software releases. Customers may use publisher information, digital signatures, release information, and other available verification information to identify official releases.
+
+4. SOURCE CODE AND MODIFICATION
+
+The SwiftPack Studio source code is proprietary to Smekal Solutions and is not distributed to users under this Agreement.
+
+Users receive the right to use the Software as provided under this Agreement. This Agreement does not transfer ownership of the source code or intellectual property.
+
+Unless expressly authorized in writing by Smekal Solutions, users may not modify, alter, adapt, translate, reverse engineer, decompile, disassemble, create derivative works from, or attempt to obtain or reproduce the source code, except to the extent such restriction is prohibited by applicable law.
+
+5. RESTRICTIONS
+
+Unless expressly authorized in writing by Smekal Solutions, users may not:
+
+1. sell, sublicense, rent, lease, or otherwise commercially distribute SwiftPack Studio itself;
+2. distribute unauthorized copies of SwiftPack Studio;
+3. remove or alter copyright, trademark, license, or ownership notices;
+4. represent themselves as the owner, developer, or official distributor of SwiftPack Studio;
+5. create or distribute a rebranded or derivative version of SwiftPack Studio;
+6. provide customers with a license to SwiftPack Studio that is broader than the rights granted by this Agreement; or
+7. create or market a competing product based substantially on SwiftPack Studio.
+
+These restrictions do not prevent authorized organizations from using SwiftPack Studio as a tool to provide professional services to their customers.
+
+6. CUSTOMIZATION, SUPPORT AND TRAINING
+
+Organizations that require modifications, customized functionality, enterprise integrations, or other organization-specific development may request such services from Smekal Solutions. Such work may be provided as a paid service under a separate agreement.
+
+The free Software license does not include professional training provided by Smekal Solutions.
+
+Organizations may independently learn and use the publicly available Software documentation and other publicly available SwiftPack Studio information.
+
+Smekal Solutions may provide paid training services relating to SwiftPack Studio. Training fees and terms will be agreed separately.
+
+Smekal Solutions may also provide paid technical support, implementation, consulting, integration, troubleshooting, modification, customization, and other professional services.
+
+Training or professional services relating to third-party tools used in or with SwiftPack Studio are outside the scope of this Agreement unless separately agreed in writing.
+
+For training, customization, modification, implementation, technical support, consulting, integration, troubleshooting, or other professional services, please send an email to contact@smekalsolutions.com.
+
+7. COMMUNITY TRAINING AND PUBLIC CONTENT
+
+Anyone may create training videos, tutorials, demonstrations, walkthroughs, reviews, or other educational content about SwiftPack Studio and publish such content on social media, video platforms, websites, blogs, or other public channels.
+
+Such content must not falsely represent the creator as Smekal Solutions, an authorized representative, or an official trainer of Smekal Solutions unless separately authorized in writing.
+
+The SwiftPack Studio name may be used to accurately identify the subject of the content, provided that such use does not imply endorsement, sponsorship, partnership, or official affiliation with Smekal Solutions.
+
+8. UPDATES, FEATURE REQUESTS AND BUG REPORTS
+
+Smekal Solutions may update, improve, replace, discontinue, or otherwise change SwiftPack Studio at any time, including its features, functionality, installer, documentation, dependencies, user interface, and release versions.
+
+Users and organizations may submit feature requests and suggestions. Smekal Solutions may consider such requests at its discretion.
+
+Organization-specific internal standards, processes, policies, or proprietary requirements do not obligate Smekal Solutions to include such requirements in a general release. Such requirements may be considered separately as paid customization or development services.
+
+Users and organizations may report bugs, defects, errors, security concerns, or other issues. Smekal Solutions may review and address such reports at its discretion. A report does not create an obligation to provide a specific fix, release, or support service unless separately agreed.
+
+9. THIRD-PARTY SOFTWARE, OWNERSHIP AND TRADEMARKS
+
+SwiftPack Studio may use, include, or interact with third-party software, libraries, frameworks, services, or tools. Such third-party components may be subject to separate licenses and terms. This Agreement does not override those terms.
+
+All original SwiftPack Studio intellectual property, including its architecture, scripts, documentation, user interface, product design, branding, and related materials, remains the property of Smekal Solutions unless expressly stated otherwise.
+
+Nothing in this Agreement transfers ownership of Smekal Solutions trademarks or intellectual property.
+
+10. YOUR DATA AND CONTENT
+
+SwiftPack Studio is designed to perform application packaging and deployment work on your computer and, where applicable, within your own Microsoft Intune tenant.
+
+Smekal Solutions does not claim ownership of application installers, scripts, packaging configurations, deployment settings, or other content that you supply to or create with the Software.
+
+The Software may interact with third-party software and services that you configure or provide, including Microsoft Intune and other packaging tools. Their respective terms and privacy policies may apply.
+
+For information about personal data processed by Smekal Solutions, see the Privacy Policy included with the Software.
+
+11. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+YOU ASSUME THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE, INCLUDING ALL ACTIVITIES IT PERFORMS SUCH AS PACKAGING, INSTALLING, UNINSTALLING, AND PUBLISHING SOFTWARE TO INTUNE.
+
+12. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, OR FOR LOSS OF PROFITS, DATA, OR BUSINESS, ARISING OUT OF OR RELATED TO THE SOFTWARE.
+
+Nothing in this Agreement excludes or limits any liability that cannot be excluded or limited under applicable law, including liability for death or personal injury caused by negligence, fraud, fraudulent misrepresentation, or any other liability that may not be excluded by mandatory law.
+
+13. TERMINATION
+
+This Agreement is effective until terminated.
+
+Licensor may terminate your right to use the Software if you materially breach this Agreement. Upon termination, you must stop using the Software and uninstall it.
+
+Sections concerning restrictions, ownership, third-party components, warranty, liability, and governing law survive termination to the extent applicable.
+
+14. GOVERNING LAW
+
+This Agreement is governed by the laws of India, and the courts of Bengaluru, Karnataka, India shall have exclusive jurisdiction, without regard to conflict-of-law principles.
+
+This does not deprive you of the protection of any mandatory consumer-protection rights or the jurisdiction of local courts that applicable law in your country of residence grants you and that cannot be waived by agreement.
+
+15. ENTIRE AGREEMENT; CHANGES
+
+This Agreement, together with the Privacy Policy and Third-Party Software Notices and Attributions, is the entire agreement between you and Licensor regarding SwiftPack Studio.
+
+Licensor may update this Agreement. The updated version will identify its effective date. Continued use of the Software after an updated Agreement becomes effective constitutes acceptance to the extent permitted by applicable law.
+
+16. CONTACT
+
+Smekal Solutions
+No. 951, First Floor, 24th Main, 2nd Phase,
+JP Nagar, Bengaluru - 560078
+E-mail: contact@smekalsolutions.com
+Website: https://www.smekalsolutions.com

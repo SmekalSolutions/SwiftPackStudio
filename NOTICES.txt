@@ -1,0 +1,151 @@
+SwiftPack Studio
+Third-Party Software Notices and Attributions
+
+Published by Smekal Solutions.
+
+SwiftPack Studio interoperates with, relies upon, and in some cases includes the third-party components listed below. Most components are NOT distributed with SwiftPack Studio; you obtain and install them yourself, and SwiftPack Studio invokes or interoperates with them on your machine. Where a component IS included with SwiftPack Studio, that is stated explicitly in its entry below.
+
+Each component is the property of its respective owners and is governed by its own license terms. Copies of the referenced license texts are included with this product alongside this file where required by the applicable license (LGPL-3.0.txt, GPL-3.0.txt, MIT.txt, MS-RL.txt, and OSMF-EULA.txt).
+
+Smekal Solutions is not affiliated with, sponsored by, or endorsed by any of the projects or companies named below.
+
+================================================================================
+PSAppDeployToolkit (PSADT)
+================================================================================
+
+Copyright (C) 2026 PSAppDeployToolkit Team
+(Sean Lillis, Dan Cunningham, Muhammad Mashwani, Mitch Richters, Dan Gough).
+
+Website:    https://psappdeploytoolkit.com
+Source:     https://github.com/PSAppDeployToolkit/PSAppDeployToolkit
+License:    GNU Lesser General Public License, version 3 (LGPL-3.0)
+            https://www.gnu.org/licenses/lgpl-3.0.html
+
+SwiftPack Studio helps you author and run software deployment packages that use the PSAppDeployToolkit module. The PSAppDeployToolkit module is NOT bundled with or redistributed by SwiftPack Studio; you supply and install it yourself.
+
+PSAppDeployToolkit is licensed under the GNU Lesser General Public License v3.0. Copies of the GNU LGPL v3.0 and the GNU GPL v3.0 are included with this product alongside this file (LGPL-3.0.txt and GPL-3.0.txt). The corresponding source of PSAppDeployToolkit is available from the source URL above.
+
+================================================================================
+Microsoft Win32 Content Prep Tool (IntuneWinAppUtil.exe)
+================================================================================
+
+Copyright (C) Microsoft Corporation.
+
+Source:     https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool
+License:    Microsoft license terms (see the tool's own LICENSE).
+
+Used to convert prepared application sources into the .intunewin format for Microsoft Intune. This tool is NOT bundled with or redistributed by SwiftPack Studio; you supply it yourself, and SwiftPack Studio invokes the copy you provide.
+
+================================================================================
+IntuneWin32App (PowerShell module)
+================================================================================
+
+Copyright (C) Nickolaj Andersen and contributors.
+
+Source:     https://github.com/MSEndpointMgr/IntuneWin32App
+License:    MIT License (see MIT.txt, included alongside this file)
+            https://opensource.org/license/mit
+
+This module is not bundled with SwiftPack Studio. If the user selects "Download PowerShell modules for Publish to Intune and Send Mail" during installation, SwiftPack Studio Setup downloads and installs the module from the PowerShell Gallery. An internet connection is required.
+
+================================================================================
+Microsoft Windows Package Manager (winget) Community Manifests
+================================================================================
+
+Copyright (C) Microsoft Corporation and winget-pkgs contributors.
+
+Source:     https://github.com/microsoft/winget-pkgs
+License:    MIT License (see MIT.txt, included alongside this file)
+            https://opensource.org/license/mit
+
+SwiftPack Studio reads community package manifests, provided under the MIT License by their respective contributors. SwiftPack Studio also INCLUDES a derived index file (github_catalog.json) containing factual package metadata extracted from those manifests: the package identifier/publisher, application name, latest version, and (where the installer is hosted on GitHub) the "owner/repo" reference.
+
+No manifest text, descriptions, logos, installers, or software are redistributed; only this factual metadata index is included. In accordance with the MIT License, this attribution and a copy of the license (MIT.txt) are provided.
+
+================================================================================
+.NET Runtime
+================================================================================
+
+Copyright (C) .NET Foundation and Contributors / Microsoft Corporation.
+
+Source:     https://github.com/dotnet/runtime
+License:    Microsoft license terms / MIT License (see MIT.txt, included alongside this file)
+            https://opensource.org/license/mit
+
+SwiftPack Studio is built on the .NET Runtime, which is installed on the user's machine (or supplied per Microsoft's distribution terms).
+
+================================================================================
+.NET Community Toolkit - MVVM Toolkit (CommunityToolkit.Mvvm)
+================================================================================
+
+Copyright (c) .NET Foundation and Contributors.
+
+Source:     https://github.com/CommunityToolkit/dotnet
+NuGet:      https://www.nuget.org/packages/CommunityToolkit.Mvvm
+License:    MIT License (see MIT.txt, included alongside this file)
+            https://opensource.org/license/mit
+
+SwiftPack Studio uses the MVVM Toolkit (CommunityToolkit.Mvvm) in its user-interface layer. This component IS included with SwiftPack Studio as an unmodified binary (CommunityToolkit.Mvvm.dll). It has not been modified. The copyright and permission notice are retained and a copy of the MIT License is provided (MIT.txt).
+
+================================================================================
+Microsoft Authentication Library for .NET (MSAL.NET / Microsoft.Identity.Client)
+================================================================================
+
+Copyright (c) Microsoft Corporation.
+
+Source:     https://github.com/AzureAD/microsoft-authentication-library-for-dotnet
+NuGet:      https://www.nuget.org/packages/Microsoft.Identity.Client
+License:    MIT License (see MIT.txt, included alongside this file)
+            https://opensource.org/license/mit
+
+SwiftPack Studio includes the Microsoft Authentication Library for .NET (Microsoft.Identity.Client) for acquiring access tokens for Microsoft services. This component IS included with SwiftPack Studio as an unmodified binary (Microsoft.Identity.Client.dll). It has not been modified. The copyright and permission notices are retained and a copy of the MIT License is provided (MIT.txt).
+
+================================================================================
+Microsoft .NET Libraries
+(System.Management, System.ServiceProcess.ServiceController)
+================================================================================
+
+Copyright (c) .NET Foundation and Contributors / Microsoft Corporation.
+
+Source:     https://github.com/dotnet/runtime
+NuGet:      https://www.nuget.org/packages/System.Management
+            https://www.nuget.org/packages/System.ServiceProcess.ServiceController
+License:    MIT License (see MIT.txt, included alongside this file)
+            https://opensource.org/license/mit
+
+SwiftPack Studio includes the following Microsoft .NET libraries as unmodified binaries: System.Management (Windows Management Instrumentation access) and System.ServiceProcess.ServiceController (Windows service control). They have not been modified. The copyright and permission notices are retained and a copy of the MIT License is provided (MIT.txt).
+
+================================================================================
+WixToolset.Dtf.WindowsInstaller (WiX Toolset DTF library)
+================================================================================
+
+Copyright (c) .NET Foundation and contributors.
+
+Source:     https://github.com/wixtoolset/wix
+NuGet:      https://www.nuget.org/packages/WixToolset.Dtf.WindowsInstaller
+License:    Microsoft Reciprocal License (MS-RL)
+            (see MS-RL.txt, included alongside this file)
+            https://opensource.org/license/ms-rl
+
+SwiftPack Studio uses the WiX Toolset DTF (Deployment Tools Foundation) managed library to read, inspect, and author Windows Installer (.msi) databases (for example, on the Validate Source / Create MSI features). This is the DTF library only; it is not the WiX build toolset.
+
+Open Source Maintenance Fee (OSMF): WiX Toolset packages at v6 and later (including this DTF package) carry the Open Source Maintenance Fee. Organizations with annual gross revenue of US$10,000 or more are required to satisfy the OSMF by sponsoring the wixtoolset GitHub organization; users under that threshold are exempt, as are users who pay separate support/maintenance fees to the project. The OSMF is a support fee, not a license fee, and does not change the MS-RL licensing of the software. See https://wixtoolset.org/osmf/ and the included OSMF-EULA.txt for details.
+
+This component IS included with SwiftPack Studio as an unmodified binary (WixToolset.Dtf.WindowsInstaller.dll). It has not been modified. In accordance with the MS-RL, the copyright and attribution notices are retained and a copy of the MS-RL is provided (MS-RL.txt). The corresponding source for this version is the WiX Toolset source at release tag v6.0.2, available from https://github.com/wixtoolset/wix/releases/tag/v6.0.2 (and via the NuGet package's SourceLink metadata).
+
+================================================================================
+Sysinternals PsExec (PsExec.exe)
+================================================================================
+
+Copyright (C) Microsoft Corporation.
+
+Website:    https://learn.microsoft.com/sysinternals/downloads/psexec
+License:    Microsoft Sysinternals Software License Terms.
+
+Where SYSTEM-context operations are used, SwiftPack Studio invokes PsExec. PsExec is NOT bundled with or redistributed by SwiftPack Studio; you supply it yourself, and it remains subject to the Microsoft Sysinternals Software License Terms.
+
+================================================================================
+
+The product and company names above are trademarks of their respective owners.
+
+For the terms governing SwiftPack Studio itself, see the End User License Agreement (EULA.txt).
