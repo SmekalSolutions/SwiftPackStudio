@@ -7,6 +7,8 @@ These documents are installed with SwiftPack Studio under:
 
 C:\Program Files\Smekal\SwiftPack Studio\Legal
 
+They are also available in the Legal folder of the source repository.
+
 SwiftPack Studio license and terms:
 - LICENSE.txt   (MIT License - governs the SwiftPack Studio source code and software)
 - EULA.txt      (Terms of Use and Trademark Notice for official releases)

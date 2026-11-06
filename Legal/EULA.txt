@@ -3,10 +3,9 @@ TERMS OF USE AND TRADEMARK NOTICE
 SwiftPack Studio
 Published by Smekal Solutions ("we", "us")
 
-Effective date: 4th November 2026
 Version: 2.0
 
-This document replaces the End User License Agreement (Version 1.0, effective 20th September 2026). SwiftPack Studio is free and open-source software. Please read these terms before installing or using official SwiftPack Studio releases.
+This document replaces the previous End User License Agreement. SwiftPack Studio is free and open-source software. Please read these terms before installing or using official SwiftPack Studio releases.
 
 1. LICENSE
 
@@ -97,4 +96,4 @@ This does not deprive you of the protection of any mandatory consumer-protection
 
 These Terms, together with LICENSE.txt, PrivacyPolicy.txt, and NOTICES.txt, are the entire understanding between you and Smekal Solutions regarding SwiftPack Studio.
 
-Smekal Solutions may update these Terms. The updated version will identify its effective date. Changes do not alter the MIT License terms under which you have already received the Software.
+Smekal Solutions may update these Terms. The updated version will have a new version number. Changes do not alter the MIT License terms under which you have already received the Software.

@@ -75,7 +75,7 @@ Source:     https://github.com/microsoft/winget-pkgs
 License:    MIT License (see MIT.txt, included alongside this file)
             https://opensource.org/license/mit
 
-SwiftPack Studio reads community package manifests, provided under the MIT License by their respective contributors. SwiftPack Studio also INCLUDES a derived index file (github_catalog.json) containing factual package metadata extracted from those manifests: the package identifier/publisher, application name, latest version, and (where the installer is hosted on GitHub) the "owner/repo" reference.
+SwiftPack Studio reads community package manifests, provided under the MIT License by their respective contributors. The official SwiftPack Studio installer also INCLUDES a derived index file (github_catalog.json) containing factual package metadata extracted from those manifests: the package identifier/publisher, application name, latest version, and (where the installer is hosted on GitHub) the "owner/repo" reference.
 
 No manifest text, descriptions, logos, installers, or software are redistributed; only this factual metadata index is included. In accordance with the MIT License, this attribution and a copy of the license (MIT.txt) are provided.
 
