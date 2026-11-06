@@ -1,0 +1,15 @@
+<Application x:Class="SwiftPack.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- StartupUri removed: App.xaml.cs opens MainWindow directly (no sign-in gate) -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles.xaml"/>
+                <ResourceDictionary Source="Resources/Colors.xaml"/>
+                <!-- Active theme — LightTheme is default; swap at runtime via ThemeManager -->
+                <ResourceDictionary x:Name="ActiveTheme" Source="Resources/LightTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

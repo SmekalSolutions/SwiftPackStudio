@@ -1,0 +1,166 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- ===== DARK THEME ===== -->
+    <SolidColorBrush x:Key="WindowBgBrush"         Color="#1A1D2E"/>
+    <SolidColorBrush x:Key="NavBarBgBrush"          Color="#1E2235"/>
+    <SolidColorBrush x:Key="CardBgBrush"            Color="#2C3154"/>
+    <SolidColorBrush x:Key="InputBgBrush"           Color="#1A1D2E"/>
+    <SolidColorBrush x:Key="InputBgAltBrush"        Color="#1A2D3A68"/>
+    <SolidColorBrush x:Key="DropdownBgBrush"        Color="#2C3154"/>
+    <SolidColorBrush x:Key="ScriptBgBrush"          Color="#0D1020"/>
+    <SolidColorBrush x:Key="LineNumBgBrush"         Color="#0A0C18"/>
+    <SolidColorBrush x:Key="CommandPanelBgBrush"    Color="#12152A"/>
+    <SolidColorBrush x:Key="ParamPanelBgBrush"      Color="#181B2C"/>
+    <SolidColorBrush x:Key="FooterBgBrush"          Color="#161929"/>
+    <SolidColorBrush x:Key="BorderMainBrush"        Color="#2E3355"/>
+    <SolidColorBrush x:Key="BorderInputBrush"       Color="#3A4168"/>
+    <SolidColorBrush x:Key="BorderCardBrush"        Color="#3A4168"/>
+    <SolidColorBrush x:Key="TextPrimaryBrush"       Color="#EAEDF5"/>
+    <SolidColorBrush x:Key="TextSecondaryBrush"     Color="#8B92A9"/>
+    <SolidColorBrush x:Key="TextMutedBrush"         Color="#5A6090"/>
+    <SolidColorBrush x:Key="TextHeadingBrush"       Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="AccentBlueBrush"        Color="#4F8EF7"/>
+    <!-- Hover state for a filled accent-blue surface. Same relationship as the light theme: a step
+         lighter than the base, so hovering an already-selected tab brightens it rather than
+         darkening it. -->
+    <SolidColorBrush x:Key="AccentBlueHoverBrush"   Color="#64A3FF"/>
+    <SolidColorBrush x:Key="AccentGreenBrush"       Color="#3ECFA0"/>
+    <SolidColorBrush x:Key="AccentAmberBrush"       Color="#F7B84F"/>
+    <SolidColorBrush x:Key="AccentRedBrush"         Color="#F7584F"/>
+    <SolidColorBrush x:Key="ScrollThumbBrush"       Color="#44FFFFFF"/>
+    <SolidColorBrush x:Key="NavHoverBrush"          Color="#22FFFFFF"/>
+    <SolidColorBrush x:Key="ListItemHoverBrush"     Color="#252844"/>
+    <SolidColorBrush x:Key="ListItemSelectedBrush"  Color="#2C3154"/>
+    <SolidColorBrush x:Key="GridSplitterBrush"      Color="#2E3355"/>
+    <SolidColorBrush x:Key="SearchBoxBgBrush"       Color="#0F111E"/>
+    <SolidColorBrush x:Key="NoScriptBgBrush"        Color="#0F111E"/>
+    <SolidColorBrush x:Key="RunningBadgeBgBrush"    Color="#1A3A1A"/>
+    <!-- Transparent semi-dark for script editor -->
+    <Color x:Key="ScriptEditorBgColor">#E60D1020</Color>
+    <!-- Line highlight -->
+    <Color x:Key="LineHighlightColor">#605C4200</Color>
+    <!-- Inline button accent colours (unchanged across themes) -->
+    <SolidColorBrush x:Key="ImportBtnBgBrush"       Color="#1E1A2E"/>
+    <SolidColorBrush x:Key="ImportBtnFgBrush"       Color="#B48EF7"/>
+    <SolidColorBrush x:Key="ImportBtnBorderBrush"   Color="#5A3A8A"/>
+    <SolidColorBrush x:Key="SaveBtnBgBrush"         Color="#1A3A6A"/>
+    <SolidColorBrush x:Key="SaveBtnFgBrush"         Color="#4F8EF7"/>
+    <SolidColorBrush x:Key="SaveBtnBorderBrush"     Color="#4F8EF7"/>
+    <SolidColorBrush x:Key="OpenBtnFgBrush"         Color="#EAEDF5"/>
+    <SolidColorBrush x:Key="OpenBtnBgBrush"         Color="#1A2240"/>
+    <SolidColorBrush x:Key="OpenBtnBorderBrush"     Color="#2E3355"/>
+    <SolidColorBrush x:Key="CancelBtnBgBrush"       Color="#1E1E2E"/>
+    <SolidColorBrush x:Key="CancelBtnFgBrush"       Color="#4A4A6A"/>
+    <SolidColorBrush x:Key="CancelBtnBorderBrush"   Color="#3A3A5A"/>
+    <SolidColorBrush x:Key="CancelActiveBgBrush"    Color="#2C1A1A"/>
+    <SolidColorBrush x:Key="CancelActiveFgBrush"    Color="#F87171"/>
+    <SolidColorBrush x:Key="CancelActiveBorderBrush" Color="#EF4444"/>
+    <SolidColorBrush x:Key="TbBtnHoverBgBrush"      Color="#252844"/>
+    <SolidColorBrush x:Key="TbBtnPressedBgBrush"    Color="#3A4168"/>
+    <SolidColorBrush x:Key="TbBtnDisabledFgBrush"   Color="#3A4168"/>
+    <SolidColorBrush x:Key="TbSaveBgBrush"          Color="#1A3A6A"/>
+    <!-- Script editor -->
+    <SolidColorBrush x:Key="LineHighlightFillBrush"     Color="#505C4200"/>
+    <SolidColorBrush x:Key="ScriptCaretBrush"           Color="#FFEE00"/>
+    <!-- Script editor bg (semi-transparent over highlight canvas) -->
+    <SolidColorBrush x:Key="ScriptEditorBgBrush"        Color="#E60D1020"/>
+    <!-- ── Dialog semantic colours (dark) ── -->
+    <SolidColorBrush x:Key="DlgBodyBgBrush"             Color="#1E2235"/>
+    <SolidColorBrush x:Key="DlgFooterBgBrush"           Color="#14172E"/>
+    <SolidColorBrush x:Key="DlgBorderBrush"             Color="#2E3355"/>
+    <!-- Dialog header accents -->
+    <Color x:Key="DlgHdrNeutralBg">#252844</Color>
+    <Color x:Key="DlgHdrNeutralFg">#EAEDF5</Color>
+    <Color x:Key="DlgHdrRedBg">#2C1A1A</Color>
+    <Color x:Key="DlgHdrRedFg">#F7584F</Color>
+    <Color x:Key="DlgHdrAmberBg">#2C2010</Color>
+    <Color x:Key="DlgHdrAmberFg">#F7B84F</Color>
+    <Color x:Key="DlgHdrGreenBg">#142A1A</Color>
+    <Color x:Key="DlgHdrGreenFg">#3ECFA0</Color>
+    <Color x:Key="DlgHdrBlueBg">#1C2448</Color>
+    <Color x:Key="DlgHdrBlueFg">#4F8EF7</Color>
+    <!-- Dialog button styles -->
+    <SolidColorBrush x:Key="DlgBtnNeutralBgBrush"       Color="#252844"/>
+    <SolidColorBrush x:Key="DlgBtnNeutralFgBrush"       Color="#EAEDF5"/>
+    <SolidColorBrush x:Key="DlgBtnNeutralBorderBrush"   Color="#5A6090"/>
+    <SolidColorBrush x:Key="DlgBtnBlueBgBrush"          Color="#1C2448"/>
+    <SolidColorBrush x:Key="DlgBtnBlueFgBrush"          Color="#4F8EF7"/>
+    <SolidColorBrush x:Key="DlgBtnBlueBorderBrush"      Color="#4F8EF7"/>
+    <SolidColorBrush x:Key="DlgBtnGreenBgBrush"         Color="#1A3A1A"/>
+    <SolidColorBrush x:Key="DlgBtnGreenFgBrush"         Color="#3ECFA0"/>
+    <SolidColorBrush x:Key="DlgBtnGreenBorderBrush"     Color="#3ECFA0"/>
+    <SolidColorBrush x:Key="DlgBtnRedBgBrush"           Color="#3A1A1A"/>
+    <SolidColorBrush x:Key="DlgBtnRedFgBrush"           Color="#F7584F"/>
+    <SolidColorBrush x:Key="DlgBtnRedBorderBrush"       Color="#F7584F"/>
+    <SolidColorBrush x:Key="DlgBtnAmberBgBrush"         Color="#3A2A10"/>
+    <SolidColorBrush x:Key="DlgBtnAmberFgBrush"         Color="#F7B84F"/>
+    <SolidColorBrush x:Key="DlgBtnAmberBorderBrush"     Color="#F7B84F"/>
+    <!-- Reboot warning -->
+    <SolidColorBrush x:Key="RebootWarnBgBrush"          Color="#252010"/>
+    <SolidColorBrush x:Key="RebootWarnFgBrush"          Color="#F7B84F"/>
+    <!-- Log/muted info text -->
+    <SolidColorBrush x:Key="DlgInfoTextBrush"           Color="#5A6090"/>
+    <!-- ── Nav icon accent pill backgrounds (dark) ── -->
+    <SolidColorBrush x:Key="NavIconMSTBrush"            Color="#2D1B69"/>
+    <SolidColorBrush x:Key="NavIconMSTFgBrush"          Color="#A78BFA"/>
+    <SolidColorBrush x:Key="NavIconPkgBrush"            Color="#1E3A5F"/>
+    <SolidColorBrush x:Key="NavIconPkgFgBrush"          Color="#60A5FA"/>
+    <SolidColorBrush x:Key="NavIconModBrush"            Color="#3B2800"/>
+    <SolidColorBrush x:Key="NavIconModFgBrush"          Color="#FCD34D"/>
+    <SolidColorBrush x:Key="NavIconExecBrush"           Color="#14532D"/>
+    <SolidColorBrush x:Key="NavIconExecFgBrush"         Color="#4ADE80"/>
+    <SolidColorBrush x:Key="NavIconIntuneBrush"         Color="#0C3252"/>
+    <SolidColorBrush x:Key="NavIconIntuneFgBrush"       Color="#38BDF8"/>
+    <SolidColorBrush x:Key="NavIconPublishBrush"        Color="#4A1942"/>
+    <SolidColorBrush x:Key="NavIconPublishFgBrush"      Color="#F472B6"/>
+    <SolidColorBrush x:Key="NavIconAutoBrush"           Color="#431407"/>
+    <SolidColorBrush x:Key="NavIconAutoFgBrush"         Color="#FB923C"/>
+    <SolidColorBrush x:Key="NavIconQABrush"             Color="#14532D"/>
+    <SolidColorBrush x:Key="NavIconQAFgBrush"           Color="#3ECFA0"/>
+    <!-- ── Deploy type card styles (dark) ── -->
+    <SolidColorBrush x:Key="DeployCardInstallBgBrush"   Color="#142A1A"/>
+    <SolidColorBrush x:Key="DeployCardInstallFgBrush"   Color="#3ECFA0"/>
+    <SolidColorBrush x:Key="DeployCardInstallBorderBrush" Color="#2EBF8A"/>
+    <SolidColorBrush x:Key="DeployCardUninstallBgBrush" Color="#2A1F00"/>
+    <SolidColorBrush x:Key="DeployCardUninstallFgBrush" Color="#F7B84F"/>
+    <SolidColorBrush x:Key="DeployCardUninstallBorderBrush" Color="#D97706"/>
+    <SolidColorBrush x:Key="DeployCardRepairBgBrush"    Color="#1C2448"/>
+    <SolidColorBrush x:Key="DeployCardRepairFgBrush"    Color="#4F8EF7"/>
+    <SolidColorBrush x:Key="DeployCardRepairBorderBrush" Color="#3B6FD4"/>
+    <SolidColorBrush x:Key="DeployCardInactiveBgBrush"  Color="#1A1D2E"/>
+    <SolidColorBrush x:Key="DeployCardInactiveFgBrush"  Color="#6B7280"/>
+    <SolidColorBrush x:Key="DeployCardInactiveBorderBrush" Color="#2E3355"/>
+    <!-- ── Log panel (same dark feel in both themes) ── -->
+    <SolidColorBrush x:Key="LogPanelBgBrush"            Color="#0D0F1C"/>
+    <SolidColorBrush x:Key="LogPanelFgBrush"            Color="#EAEDF5"/>
+    <!-- ── Toolbar button colour groups (dark) ── -->
+    <!-- Undo/Redo: Purple -->
+    <SolidColorBrush x:Key="TbUndoBgBrush"              Color="#2D1B69"/>
+    <SolidColorBrush x:Key="TbUndoFgBrush"              Color="#A78BFA"/>
+    <SolidColorBrush x:Key="TbUndoBorderBrush"          Color="#7C3AED"/>
+    <!-- Delete: Red -->
+    <SolidColorBrush x:Key="TbDeleteBgBrush"            Color="#2C1A1A"/>
+    <SolidColorBrush x:Key="TbDeleteFgBrush"            Color="#F87171"/>
+    <SolidColorBrush x:Key="TbDeleteBorderBrush"        Color="#EF4444"/>
+    <!-- Cut/Copy/Paste: Amber -->
+    <SolidColorBrush x:Key="TbClipboardBgBrush"         Color="#3B2800"/>
+    <SolidColorBrush x:Key="TbClipboardFgBrush"         Color="#FCD34D"/>
+    <SolidColorBrush x:Key="TbClipboardBorderBrush"     Color="#D97706"/>
+    <!-- MoveUp/Down: Blue -->
+    <SolidColorBrush x:Key="TbMoveBgBrush"              Color="#1E3A5F"/>
+    <SolidColorBrush x:Key="TbMoveFgBrush"              Color="#60A5FA"/>
+    <SolidColorBrush x:Key="TbMoveBorderBrush"          Color="#2563EB"/>
+    <!-- Comment/Uncomment: Teal -->
+    <SolidColorBrush x:Key="TbCommentBgBrush"           Color="#14532D"/>
+    <SolidColorBrush x:Key="TbCommentFgBrush"           Color="#4ADE80"/>
+    <SolidColorBrush x:Key="TbCommentBorderBrush"       Color="#16A34A"/>
+    <!-- Insert: Sky -->
+    <SolidColorBrush x:Key="TbInsertBgBrush"            Color="#0C3252"/>
+    <SolidColorBrush x:Key="TbInsertFgBrush"            Color="#38BDF8"/>
+    <SolidColorBrush x:Key="TbInsertBorderBrush"        Color="#0284C7"/>
+    <!-- Tab buttons (Info / Script) -->
+    <SolidColorBrush x:Key="TabInfoBgBrush"             Color="#2D1B69"/>
+    <SolidColorBrush x:Key="TabInfoFgBrush"             Color="#A78BFA"/>
+    <SolidColorBrush x:Key="TabScriptBgBrush"           Color="#14532D"/>
+    <SolidColorBrush x:Key="TabScriptFgBrush"           Color="#4ADE80"/>
+</ResourceDictionary>

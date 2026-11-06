@@ -1,0 +1,100 @@
+TERMS OF USE AND TRADEMARK NOTICE
+
+SwiftPack Studio
+Published by Smekal Solutions ("we", "us")
+
+Effective date: 4th November 2026
+Version: 2.0
+
+This document replaces the End User License Agreement (Version 1.0, effective 20th September 2026). SwiftPack Studio is free and open-source software. Please read these terms before installing or using official SwiftPack Studio releases.
+
+1. LICENSE
+
+SwiftPack Studio (the "Software") and its source code are licensed under the MIT License, Copyright (c) 2026 Smekal Solutions. The full text is in LICENSE.txt, included with the Software and available in the official source repository.
+
+Under the MIT License you may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the conditions in LICENSE.txt, including retention of the copyright and permission notice. No fee, subscription, registration, or activation is required.
+
+Where these Terms and the MIT License conflict regarding the Software's code, the MIT License prevails.
+
+2. COMMERCIAL AND PROFESSIONAL SERVICE USE
+
+You may use SwiftPack Studio as a tool to provide paid professional services to your own customers or clients, and you may charge for those services. You may install it on your own authorized computers or on authorized customer computers and environments without separate permission from Smekal Solutions and without paying a license fee.
+
+Purchasing technical support from Smekal Solutions is optional and is not a condition of using the Software.
+
+3. OFFICIAL RELEASES
+
+Smekal Solutions distributes official SwiftPack Studio releases through the official Smekal Solutions website and official GitHub release channels. Official releases may be digitally signed. You may use publisher information, digital signatures, and release information to identify official releases.
+
+Because the source code is open, anyone may build or modify the Software. Builds not published by Smekal Solutions are not official releases, are not signed by Smekal Solutions, and are not supported by Smekal Solutions.
+
+4. TRADEMARKS AND BRANDING
+
+The MIT License covers the source code. It does not grant any right to use the names "Smekal Solutions" or "SwiftPack Studio", or any associated logos, icons, or branding (together, the "Marks"), except as described here.
+
+You may use the SwiftPack Studio name to accurately identify the Software, for example to state that your work is a fork of, is based on, or works with SwiftPack Studio.
+
+If you distribute a modified version of the Software, you must:
+(a) use a different name and branding for it, and remove the Marks, logos, and icons from it;
+(b) not suggest that it is made, signed, endorsed, sponsored, or supported by Smekal Solutions; and
+(c) retain the copyright and license notices required by the MIT License.
+
+You must not represent yourself as the owner or official distributor of SwiftPack Studio, or as an official representative or trainer of Smekal Solutions unless separately authorized in writing.
+
+5. COMMUNITY TRAINING AND PUBLIC CONTENT
+
+Anyone may create and publish training videos, tutorials, demonstrations, walkthroughs, reviews, or other educational content about SwiftPack Studio on any public channel. Such content must follow Section 4 and must not imply endorsement, sponsorship, partnership, or official affiliation with Smekal Solutions.
+
+6. CUSTOMIZATION, SUPPORT AND TRAINING
+
+Smekal Solutions may offer paid training, technical support, implementation, consulting, integration, troubleshooting, modification, and customization services relating to SwiftPack Studio under separate agreements. These services are optional. Anyone remains free to use, learn, and modify the Software under the MIT License without them.
+
+Services relating to third-party tools used in or with SwiftPack Studio are outside the scope of these Terms unless separately agreed in writing.
+
+For such services, email contact@smekalsolutions.com.
+
+7. UPDATES, FEATURE REQUESTS, BUG REPORTS AND CONTRIBUTIONS
+
+Smekal Solutions may update, improve, replace, discontinue, or otherwise change SwiftPack Studio at any time, including its features, installer, documentation, dependencies, and release versions.
+
+You may submit feature requests, suggestions, and bug or security reports. Smekal Solutions may review them at its discretion, and a report does not create an obligation to provide a specific fix, release, or support.
+
+Unless you state otherwise in writing, any contribution you intentionally submit to the official SwiftPack Studio repository is licensed under the MIT License, on the same terms as the rest of the Software.
+
+8. THIRD-PARTY SOFTWARE
+
+SwiftPack Studio may use, include, or interact with third-party software, libraries, frameworks, services, or tools. They are subject to their own licenses and terms, listed in NOTICES.txt. These Terms and the MIT License do not override those terms.
+
+9. YOUR DATA AND CONTENT
+
+SwiftPack Studio performs application packaging and deployment work on your computer and, where applicable, within your own Microsoft Intune tenant. Smekal Solutions does not claim ownership of application installers, scripts, packaging configurations, deployment settings, or other content that you supply to or create with the Software.
+
+For information about personal data processed by Smekal Solutions, see PrivacyPolicy.txt.
+
+10. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+YOU ASSUME THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE, INCLUDING ALL ACTIVITIES IT PERFORMS SUCH AS PACKAGING, INSTALLING, UNINSTALLING, AND PUBLISHING SOFTWARE TO INTUNE.
+
+11. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, SMEKAL SOLUTIONS AND THE SOFTWARE'S AUTHORS AND CONTRIBUTORS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, OR FOR LOSS OF PROFITS, DATA, OR BUSINESS, ARISING OUT OF OR RELATED TO THE SOFTWARE.
+
+Nothing in these Terms excludes or limits any liability that cannot be excluded or limited under applicable law, including liability for death or personal injury caused by negligence, fraud, fraudulent misrepresentation, or any other liability that may not be excluded by mandatory law.
+
+12. TERMINATION OF THESE TERMS
+
+Your rights under the MIT License are not terminable by Smekal Solutions for reasons other than those stated in the MIT License itself. Smekal Solutions may withdraw permission to use the Marks (Section 4) from anyone who uses them in breach of these Terms.
+
+13. GOVERNING LAW
+
+These Terms are governed by the laws of India, and the courts of Bengaluru, Karnataka, India shall have exclusive jurisdiction, without regard to conflict-of-law principles.
+
+This does not deprive you of the protection of any mandatory consumer-protection rights or the jurisdiction of local courts that applicable law in your country of residence grants you and that cannot be waived by agreement.
+
+14. ENTIRE AGREEMENT; CHANGES
+
+These Terms, together with LICENSE.txt, PrivacyPolicy.txt, and NOTICES.txt, are the entire understanding between you and Smekal Solutions regarding SwiftPack Studio.
+
+Smekal Solutions may update these Terms. The updated version will identify its effective date. Changes do not alter the MIT License terms under which you have already received the Software.
