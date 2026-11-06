@@ -1,0 +1,5449 @@
+[
+  {
+    "name": "Add-ADTEdgeExtension",
+    "parameters": [
+      {
+        "name": "ExtensionID",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "UpdateUrl",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "InstallationMode",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "blocked",
+          "allowed",
+          "removed",
+          "force_installed",
+          "normal_installed"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "MinimumVersionRequired",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Add-ADTModuleCallback",
+    "parameters": [
+      {
+        "name": "Hookpoint",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "OnInit",
+          "OnStart",
+          "PreOpen",
+          "PostOpen",
+          "PreClose",
+          "PostClose",
+          "OnFinish",
+          "OnExit"
+        ],
+        "type": "PSADT.Module.CallbackType"
+      },
+      {
+        "name": "Callback",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.CommandInfo[]"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Block-ADTAppExecution",
+    "parameters": [
+      {
+        "name": "ProcessName",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "WindowLocation",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Default",
+          "TopLeft",
+          "TopCenter",
+          "TopRight",
+          "MiddleLeft",
+          "Center",
+          "MiddleRight",
+          "BottomLeft",
+          "BottomCenter",
+          "BottomRight"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogPosition"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Clear-ADTModuleCallback",
+    "parameters": [
+      {
+        "name": "Hookpoint",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "OnInit",
+          "OnStart",
+          "PreOpen",
+          "PostOpen",
+          "PreClose",
+          "PostClose",
+          "OnFinish",
+          "OnExit"
+        ],
+        "type": "PSADT.Module.CallbackType"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Close-ADTInstallationProgress",
+    "parameters": [],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Close-ADTSession",
+    "parameters": [
+      {
+        "name": "ExitCode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.Int32]"
+      },
+      {
+        "name": "NoShellExit",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Complete-ADTFunction",
+    "parameters": [
+      {
+        "name": "Cmdlet",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.PSCmdlet"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Convert-ADTRegistryPath",
+    "parameters": [
+      {
+        "name": "Key",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "SID",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Wow6432Node",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Convert-ADTValuesFromRemainingArguments",
+    "parameters": [
+      {
+        "name": "RemainingArguments",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Collections.Generic.IReadOnlyList[System.Object]"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Convert-ADTValueType",
+    "parameters": [
+      {
+        "name": "Value",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int64"
+      },
+      {
+        "name": "To",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "SByte",
+          "Int16",
+          "Int32",
+          "Int64",
+          "Byte",
+          "UInt16",
+          "UInt32",
+          "UInt64"
+        ],
+        "type": "PSADT.Utilities.ValueTypeConverter+ValueTypes"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "ConvertTo-ADTNTAccountOrSID",
+    "parameters": [
+      {
+        "name": "AccountName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Security.Principal.NTAccount"
+      },
+      {
+        "name": "SID",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Security.Principal.SecurityIdentifier"
+      },
+      {
+        "name": "WellKnownSIDName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Security.Principal.WellKnownSidType"
+      },
+      {
+        "name": "WellKnownToNTAccount",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "LocalHost",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "LdapUri",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "LDAP://",
+          "LDAPS://"
+        ],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Copy-ADTContentToCache",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Copy-ADTFile",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "Destination",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Recurse",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Flatten",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ContinueFileCopyOnError",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "FileCopyMode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Native",
+          "Robocopy"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "RobocopyParams",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String",
+        "default": "/NJH /NJS /NS /NC /NP /NDL /FP /IA:RASHCNETO /IS /IT /IM /XX /MT:4 /R:1 /W:1"
+      },
+      {
+        "name": "RobocopyAdditionalParams",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Copy-ADTFileToUserProfiles",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "Destination",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "BasePath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Profile",
+          "AppData",
+          "LocalAppData",
+          "Desktop",
+          "Documents",
+          "StartMenu",
+          "Temp",
+          "OneDrive",
+          "OneDriveCommercial"
+        ],
+        "type": "System.String",
+        "default": "Profile"
+      },
+      {
+        "name": "Recurse",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Flatten",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "FileCopyMode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Native",
+          "Robocopy"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "RobocopyParams",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String",
+        "default": "/NJH /NJS /NS /NC /NP /NDL /FP /IA:RASHCNETO /IS /IT /IM /XX /MT:4 /R:1 /W:1"
+      },
+      {
+        "name": "RobocopyAdditionalParams",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "UserProfiles",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.Types.UserProfile[]"
+      },
+      {
+        "name": "ExcludeNTAccount",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "IncludeSystemProfiles",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "IncludeServiceProfiles",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExcludeDefaultUser",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ContinueFileCopyOnError",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Disable-ADTTerminalServerInstallMode",
+    "parameters": [],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Dismount-ADTWimFile",
+    "parameters": [
+      {
+        "name": "ImagePath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.FileInfo[]"
+      },
+      {
+        "name": "Path",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.DirectoryInfo[]"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Enable-ADTTerminalServerInstallMode",
+    "parameters": [],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Export-ADTEnvironmentTableToSessionState",
+    "parameters": [
+      {
+        "name": "SessionState",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.SessionState"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Get-ADTApplication",
+    "parameters": [
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "NameMatch",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Contains",
+          "Exact",
+          "Wildcard",
+          "Regex"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "ProductCode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Guid[]"
+      },
+      {
+        "name": "ApplicationType",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "All",
+          "MSI",
+          "EXE"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "IncludeUpdatesAndHotfixes",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "FilterScript",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.ScriptBlock"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTBoundParametersAndDefaultValues",
+    "parameters": [
+      {
+        "name": "Invocation",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.InvocationInfo"
+      },
+      {
+        "name": "ParameterSetName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "HelpMessage",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Exclude",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "CommonParameters",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTCommandTable",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTConfig",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTDeferHistory",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTEnvironmentTable",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTEnvironmentVariable",
+    "parameters": [
+      {
+        "name": "Variable",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Target",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Machine",
+          "User",
+          "Process"
+        ],
+        "type": "System.EnvironmentVariableTarget"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTExecutableInfo",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "InputObject",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.FileInfo"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTFileVersion",
+    "parameters": [
+      {
+        "name": "File",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.FileInfo"
+      },
+      {
+        "name": "ProductVersion",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTFreeDiskSpace",
+    "parameters": [
+      {
+        "name": "Drive",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.DriveInfo",
+        "default": "System Drive"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTIniSection",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Section",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTIniValue",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Section",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Key",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTLoggedOnUser",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTModuleCallback",
+    "parameters": [
+      {
+        "name": "Hookpoint",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "OnInit",
+          "OnStart",
+          "PreOpen",
+          "PostOpen",
+          "PreClose",
+          "PostClose",
+          "OnFinish",
+          "OnExit"
+        ],
+        "type": "PSADT.Module.CallbackType"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTMsiExitCodeMessage",
+    "parameters": [
+      {
+        "name": "MsiExitCode",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTMsiTableProperty",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "TransformPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "Table",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String",
+        "default": "Property (MSI) or MsiPatchMetadata (MSP)"
+      },
+      {
+        "name": "TablePropertyNameColumnNum",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32",
+        "default": "1 (MSI) or 2 (MSP)"
+      },
+      {
+        "name": "TablePropertyValueColumnNum",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32",
+        "default": "2 (MSI) or 3 (MSP)"
+      },
+      {
+        "name": "GetSummaryInformation",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTObjectProperty",
+    "parameters": [
+      {
+        "name": "InputObject",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object"
+      },
+      {
+        "name": "PropertyName",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object[]"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTOperatingSystemInfo",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTPEFileArchitecture",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "InputObject",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.FileInfo"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTPendingReboot",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTPowerShellProcessPath",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTPresentationSettingsEnabledUsers",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTRegistryKey",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Wow6432Node",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SID",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ReturnEmptyKeyIfExists",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DoNotExpandEnvironmentNames",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTRunningProcesses",
+    "parameters": [
+      {
+        "name": "ProcessObjects",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.ProcessManagement.ProcessDefinition[]"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTServiceStartMode",
+    "parameters": [
+      {
+        "name": "Service",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.ServiceProcess.ServiceController"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTSession",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTShortcut",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTStringTable",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTUserNotificationState",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTUserProfiles",
+    "parameters": [
+      {
+        "name": "FilterScript",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.ScriptBlock"
+      },
+      {
+        "name": "ExcludeNTAccount",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Security.Principal.NTAccount[]"
+      },
+      {
+        "name": "IncludeSystemProfiles",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "IncludeServiceProfiles",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "IncludeIISAppPoolProfiles",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExcludeDefaultUser",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "LoadProfilePaths",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Get-ADTWindowTitle",
+    "parameters": [
+      {
+        "name": "WindowTitle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "WindowHandle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IntPtr[]"
+      },
+      {
+        "name": "ParentProcess",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Initialize-ADTFunction",
+    "parameters": [
+      {
+        "name": "Cmdlet",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.PSCmdlet"
+      },
+      {
+        "name": "SessionState",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.SessionState"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Initialize-ADTModule",
+    "parameters": [
+      {
+        "name": "AdditionalEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Collections.IDictionary"
+      },
+      {
+        "name": "ScriptDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Install-ADTMSUpdates",
+    "parameters": [
+      {
+        "name": "Directory",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Install-ADTSCCMSoftwareUpdates",
+    "parameters": [
+      {
+        "name": "WaitForPendingUpdatesTimeout",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "SoftwareUpdatesScanWaitInSeconds",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Invoke-ADTAllUsersRegistryAction",
+    "parameters": [
+      {
+        "name": "ScriptBlock",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.ScriptBlock[]"
+      },
+      {
+        "name": "UserProfiles",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.Types.UserProfile[]"
+      },
+      {
+        "name": "SkipUnloadedProfiles",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Invoke-ADTCommandWithRetries",
+    "parameters": [
+      {
+        "name": "Command",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object"
+      },
+      {
+        "name": "Retries",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "SleepDuration",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "MaximumElapsedTime",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Invoke-ADTFunctionErrorHandler",
+    "parameters": [
+      {
+        "name": "Cmdlet",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.PSCmdlet"
+      },
+      {
+        "name": "SessionState",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.SessionState"
+      },
+      {
+        "name": "ErrorRecord",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.ErrorRecord"
+      },
+      {
+        "name": "LogMessage",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ResolveErrorProperties",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "AdditionalResolveErrorProperties",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "DisableErrorResolving",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Silent",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Invoke-ADTObjectMethod",
+    "parameters": [
+      {
+        "name": "InputObject",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object"
+      },
+      {
+        "name": "MethodName",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object[]"
+      },
+      {
+        "name": "Parameter",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Collections.Hashtable"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Invoke-ADTRegSvr32",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Action",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "Register",
+          "Unregister"
+        ],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Invoke-ADTSCCMTask",
+    "parameters": [
+      {
+        "name": "ScheduleId",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "HardwareInventory",
+          "SoftwareInventory",
+          "HeartbeatDiscovery",
+          "SoftwareInventoryFileCollection",
+          "RequestMachinePolicy",
+          "EvaluateMachinePolicy",
+          "LocationServicesCleanup",
+          "SoftwareMeteringReport",
+          "SourceUpdate",
+          "PolicyAgentCleanup",
+          "RequestMachinePolicy2",
+          "CertificateMaintenance",
+          "PeerDistributionPointStatus",
+          "PeerDistributionPointProvisioning",
+          "ComplianceIntervalEnforcement",
+          "SoftwareUpdatesAgentAssignmentEvaluation",
+          "UploadStateMessage",
+          "StateMessageManager",
+          "SoftwareUpdatesScan",
+          "AMTProvisionCycle",
+          "UpdateStorePolicy",
+          "StateSystemBulkSend",
+          "ApplicationManagerPolicyAction",
+          "PowerManagementStartSummarizer"
+        ],
+        "type": "PSADT.ConfigMgr.TriggerScheduleId"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Mount-ADTWimFile",
+    "parameters": [
+      {
+        "name": "ImagePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.FileInfo"
+      },
+      {
+        "name": "Path",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.DirectoryInfo"
+      },
+      {
+        "name": "Index",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "New-ADTErrorRecord",
+    "parameters": [
+      {
+        "name": "Exception",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Exception"
+      },
+      {
+        "name": "Category",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "NotSpecified",
+          "OpenError",
+          "CloseError",
+          "DeviceError",
+          "DeadlockDetected",
+          "InvalidArgument",
+          "InvalidData",
+          "InvalidOperation",
+          "InvalidResult",
+          "InvalidType",
+          "MetadataError",
+          "NotImplemented",
+          "NotInstalled",
+          "ObjectNotFound",
+          "OperationStopped",
+          "OperationTimeout",
+          "SyntaxError",
+          "ParserError",
+          "PermissionDenied",
+          "ResourceBusy",
+          "ResourceExists",
+          "ResourceUnavailable",
+          "ReadError",
+          "WriteError",
+          "FromStdErr",
+          "SecurityError",
+          "ProtocolError",
+          "ConnectionError",
+          "AuthenticationError",
+          "LimitsExceeded",
+          "QuotaExceeded",
+          "NotEnabled"
+        ],
+        "type": "System.Management.Automation.ErrorCategory"
+      },
+      {
+        "name": "ErrorId",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "TargetObject",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object"
+      },
+      {
+        "name": "TargetName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "TargetType",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Activity",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Reason",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "RecommendedAction",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "New-ADTFolder",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "New-ADTMsiTransform",
+    "parameters": [
+      {
+        "name": "MsiPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ApplyTransformPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "NewTransformPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "TransformProperties",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Collections.Hashtable"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "New-ADTShortcut",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "TargetPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Arguments",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "IconLocation",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "IconIndex",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "Description",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "WorkingDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "WindowStyle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Normal",
+          "Maximized",
+          "Minimized"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "RunAsAdmin",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Hotkey",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "New-ADTTemplate",
+    "parameters": [
+      {
+        "name": "Destination",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Version",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "3",
+          "4"
+        ],
+        "type": "System.Int32"
+      },
+      {
+        "name": "Show",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "New-ADTValidateScriptErrorRecord",
+    "parameters": [
+      {
+        "name": "ParameterName",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ProvidedValue",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object"
+      },
+      {
+        "name": "ExceptionMessage",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "InnerException",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Exception"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "New-ADTZipFile",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "LiteralPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "DestinationPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "CompressionLevel",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Fastest",
+          "NoCompression",
+          "Optimal"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "Update",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "RemoveSourceAfterArchiving",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Open-ADTSession",
+    "parameters": [
+      {
+        "name": "SessionState",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.SessionState"
+      },
+      {
+        "name": "DeploymentType",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Install",
+          "Uninstall",
+          "Repair"
+        ],
+        "type": "PSADT.Module.DeploymentType"
+      },
+      {
+        "name": "DeployMode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Interactive",
+          "NonInteractive",
+          "Silent"
+        ],
+        "type": "PSADT.Module.DeployMode"
+      },
+      {
+        "name": "SuppressRebootPassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "TerminalServerMode",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DisableLogging",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "AppVendor",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AppName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AppVersion",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AppArch",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AppLang",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AppRevision",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AppScriptVersion",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Version"
+      },
+      {
+        "name": "AppScriptDate",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.DateTime"
+      },
+      {
+        "name": "AppScriptAuthor",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "InstallName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "InstallTitle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "DeployAppScriptFriendlyName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "DeployAppScriptVersion",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Version"
+      },
+      {
+        "name": "DeployAppScriptParameters",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Collections.Generic.IReadOnlyDictionary[System.String, System.Object]"
+      },
+      {
+        "name": "AppSuccessExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "AppRebootExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "AppProcessesToClose",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.ProcessManagement.ProcessDefinition[]"
+      },
+      {
+        "name": "RequireAdmin",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ScriptDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "DirFiles",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "DirSupportFiles",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "DefaultMsiFile",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "DefaultMstFile",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "DefaultMspFiles",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "DisableDefaultMsiProcessList",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ForceMsiDetection",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ForceWimDetection",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoSessionDetection",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoOobeDetection",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoProcessDetection",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "LogName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Out-ADTPowerShellEncodedCommand",
+    "parameters": [
+      {
+        "name": "Command",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Register-ADTDll",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTContentFromCache",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTEdgeExtension",
+    "parameters": [
+      {
+        "name": "ExtensionID",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTEnvironmentVariable",
+    "parameters": [
+      {
+        "name": "Variable",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Target",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Process",
+          "User",
+          "Machine"
+        ],
+        "type": "System.EnvironmentVariableTarget"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTFile",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "LiteralPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "Recurse",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTFileFromUserProfiles",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "LiteralPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "Recurse",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExcludeNTAccount",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "ExcludeDefaultUser",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "IncludeSystemProfiles",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "IncludeServiceProfiles",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTFolder",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "LiteralPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "InputObject",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IO.DirectoryInfo"
+      },
+      {
+        "name": "DisableRecursion",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTHashtableNullOrEmptyValues",
+    "parameters": [
+      {
+        "name": "Hashtable",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Collections.Hashtable"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTIniSection",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Section",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTIniValue",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Section",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Key",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTInvalidFileNameChars",
+    "parameters": [
+      {
+        "name": "Name",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTModuleCallback",
+    "parameters": [
+      {
+        "name": "Hookpoint",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "OnInit",
+          "OnStart",
+          "PreOpen",
+          "PostOpen",
+          "PreClose",
+          "PostClose",
+          "OnFinish",
+          "OnExit"
+        ],
+        "type": "PSADT.Module.CallbackType"
+      },
+      {
+        "name": "Callback",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.CommandInfo[]"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Remove-ADTRegistryKey",
+    "parameters": [
+      {
+        "name": "Path",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "LiteralPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Wow6432Node",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Recurse",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SID",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Reset-ADTDeferHistory",
+    "parameters": [],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Resolve-ADTErrorRecord",
+    "parameters": [
+      {
+        "name": "ErrorRecord",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.ErrorRecord"
+      },
+      {
+        "name": "Property",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "ExcludeErrorRecord",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExcludeErrorInvocation",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExcludeErrorException",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "IncludeErrorInnerException",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Send-ADTKeys",
+    "parameters": [
+      {
+        "name": "WindowTitle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "WindowHandle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.IntPtr"
+      },
+      {
+        "name": "Keys",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "WaitDuration",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTActiveSetup",
+    "parameters": [
+      {
+        "name": "StubExePath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Arguments",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Wow6432Node",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExecutionPolicy",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "AllSigned",
+          "Bypass",
+          "Default",
+          "RemoteSigned",
+          "Restricted",
+          "Undefined",
+          "Unrestricted"
+        ],
+        "type": "Microsoft.PowerShell.ExecutionPolicy"
+      },
+      {
+        "name": "Version",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Locale",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "DisableActiveSetup",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PurgeActiveSetupKey",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoExecuteForCurrentUser",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Key",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Description",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTDeferHistory",
+    "parameters": [
+      {
+        "name": "DeferTimesRemaining",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "DeferDeadline",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.DateTime"
+      },
+      {
+        "name": "DeferRunInterval",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "DeferRunIntervalLastTime",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.DateTime"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTEnvironmentVariable",
+    "parameters": [
+      {
+        "name": "Variable",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Value",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Target",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Process",
+          "User",
+          "Machine"
+        ],
+        "type": "System.EnvironmentVariableTarget"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTIniSection",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Section",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Content",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Collections.IDictionary"
+      },
+      {
+        "name": "Overwrite",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTIniValue",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Section",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Key",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Value",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTItemPermission",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AccessControlList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Security.AccessControl.FileSystemSecurity"
+      },
+      {
+        "name": "User",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "Permission",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "FullControl",
+          "Modify",
+          "ReadAndExecute",
+          "Read",
+          "Write",
+          "ListDirectory",
+          "ReadData",
+          "WriteData",
+          "AppendData",
+          "ReadExtendedAttributes",
+          "WriteExtendedAttributes",
+          "ExecuteFile",
+          "DeleteSubdirectoriesAndFiles",
+          "ReadAttributes",
+          "WriteAttributes",
+          "Delete",
+          "ReadPermissions",
+          "ChangePermissions",
+          "TakeOwnership",
+          "Synchronize",
+          "None"
+        ],
+        "type": "System.Security.AccessControl.FileSystemRights"
+      },
+      {
+        "name": "PermissionType",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Allow",
+          "Deny"
+        ],
+        "type": "System.Security.AccessControl.AccessControlType"
+      },
+      {
+        "name": "Inheritance",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "None",
+          "ObjectInherit",
+          "ContainerInherit"
+        ],
+        "type": "System.Security.AccessControl.InheritanceFlags"
+      },
+      {
+        "name": "Propagation",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "None",
+          "NoPropagateInherit",
+          "InheritOnly"
+        ],
+        "type": "System.Security.AccessControl.PropagationFlags"
+      },
+      {
+        "name": "Method",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "AddAccessRule",
+          "SetAccessRule",
+          "ResetAccessRule",
+          "RemoveAccessRule",
+          "RemoveAccessRuleAll",
+          "RemoveAccessRuleSpecific"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "DisableInheritance",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "EnableInheritance",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "RemoveExplicitRules",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTMsiProperty",
+    "parameters": [
+      {
+        "name": "Database",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.__ComObject"
+      },
+      {
+        "name": "PropertyName",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "PropertyValue",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTPowerShellCulture",
+    "parameters": [
+      {
+        "name": "CultureInfo",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Globalization.CultureInfo"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTRegistryKey",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Value",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object"
+      },
+      {
+        "name": "Type",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Unknown",
+          "String",
+          "ExpandString",
+          "Binary",
+          "DWord",
+          "MultiString",
+          "QWord",
+          "None"
+        ],
+        "type": "Microsoft.Win32.RegistryValueKind"
+      },
+      {
+        "name": "MultiStringValueMode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Replace",
+          "Add",
+          "Remove"
+        ],
+        "type": "PSADT.RegistryManagement.MultiStringValueMode"
+      },
+      {
+        "name": "Wow6432Node",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "RegistryOptions",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "None",
+          "Volatile"
+        ],
+        "type": "Microsoft.Win32.RegistryOptions"
+      },
+      {
+        "name": "SID",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTServiceStartMode",
+    "parameters": [
+      {
+        "name": "Service",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.ServiceProcess.ServiceController"
+      },
+      {
+        "name": "StartMode",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [
+          "Automatic",
+          "Automatic (Delayed Start)",
+          "Manual",
+          "Disabled",
+          "Boot",
+          "System"
+        ],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Set-ADTShortcut",
+    "parameters": [
+      {
+        "name": "LiteralPath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "TargetPath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Arguments",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "IconLocation",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "IconIndex",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "Description",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "WorkingDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "WindowStyle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Normal",
+          "Maximized",
+          "Minimized",
+          "DontChange"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "RunAsAdmin",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Hotkey",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Show-ADTBalloonTip",
+    "parameters": [
+      {
+        "name": "BalloonTipText",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "BalloonTipIcon",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Error",
+          "Info",
+          "None",
+          "Warning"
+        ],
+        "type": "System.Windows.Forms.ToolTipIcon"
+      },
+      {
+        "name": "BalloonTipTime",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "NoWait",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "BalloonTipTitle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Show-ADTDialogBox",
+    "parameters": [
+      {
+        "name": "Text",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Buttons",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Ok",
+          "OkCancel",
+          "AbortRetryIgnore",
+          "YesNoCancel",
+          "YesNo",
+          "RetryCancel"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogBoxButtons"
+      },
+      {
+        "name": "DefaultButton",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "First",
+          "Second",
+          "Third"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogBoxDefaultButton"
+      },
+      {
+        "name": "Icon",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "None",
+          "Stop",
+          "Question",
+          "Exclamation",
+          "Information"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogBoxIcon"
+      },
+      {
+        "name": "NoWait",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExitOnTimeout",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NotTopMost",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Title",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Timeout",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.UInt32"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Show-ADTHelpConsole",
+    "parameters": [],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Show-ADTInstallationProgress",
+    "parameters": [
+      {
+        "name": "StatusMessage",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "StatusMessageDetail",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "StatusBarPercentage",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.Double]"
+      },
+      {
+        "name": "MessageAlignment",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Left",
+          "Center",
+          "Right"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogMessageAlignment"
+      },
+      {
+        "name": "WindowLocation",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Default",
+          "TopLeft",
+          "TopCenter",
+          "TopRight",
+          "MiddleLeft",
+          "Center",
+          "MiddleRight",
+          "BottomLeft",
+          "BottomCenter",
+          "BottomRight"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogPosition"
+      },
+      {
+        "name": "NotTopMost",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "AllowMove",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Title",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Subtitle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Show-ADTInstallationPrompt",
+    "parameters": [
+      {
+        "name": "RequestInput",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DefaultValue",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Message",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "MessageAlignment",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Left",
+          "Center",
+          "Right"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogMessageAlignment"
+      },
+      {
+        "name": "ButtonRightText",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ButtonLeftText",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ButtonMiddleText",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Icon",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "None",
+          "Application",
+          "Asterisk",
+          "Error",
+          "Exclamation",
+          "Hand",
+          "Information",
+          "Question",
+          "Shield",
+          "Warning",
+          "WinLogo"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogSystemIcon"
+      },
+      {
+        "name": "WindowLocation",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Default",
+          "TopLeft",
+          "TopCenter",
+          "TopRight",
+          "MiddleLeft",
+          "Center",
+          "MiddleRight",
+          "BottomLeft",
+          "BottomCenter",
+          "BottomRight"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogPosition"
+      },
+      {
+        "name": "NoWait",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PersistPrompt",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "MinimizeWindows",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoExitOnTimeout",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NotTopMost",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "AllowMove",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Force",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Title",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Subtitle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Timeout",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.UInt32"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Show-ADTInstallationRestartPrompt",
+    "parameters": [
+      {
+        "name": "NoCountdown",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "CountdownSeconds",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "CountdownNoHideSeconds",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "SilentRestart",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SilentCountdownSeconds",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "WindowLocation",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Default",
+          "TopLeft",
+          "TopCenter",
+          "TopRight",
+          "MiddleLeft",
+          "Center",
+          "MiddleRight",
+          "BottomLeft",
+          "BottomCenter",
+          "BottomRight"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogPosition"
+      },
+      {
+        "name": "CustomText",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NotTopMost",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "AllowMove",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Title",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Subtitle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Show-ADTInstallationWelcome",
+    "parameters": [
+      {
+        "name": "CloseProcesses",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.ProcessManagement.ProcessDefinition[]"
+      },
+      {
+        "name": "HideCloseButton",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "AllowDefer",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "AllowDeferCloseProcesses",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Silent",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "CloseProcessesCountdown",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "ForceCloseProcessesCountdown",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "ForceCountdown",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "DeferTimes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "DeferDays",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.Double]"
+      },
+      {
+        "name": "DeferDeadline",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.DateTime"
+      },
+      {
+        "name": "DeferRunInterval",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "WindowLocation",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Default",
+          "TopLeft",
+          "TopCenter",
+          "TopRight",
+          "MiddleLeft",
+          "Center",
+          "MiddleRight",
+          "BottomLeft",
+          "BottomCenter",
+          "BottomRight"
+        ],
+        "type": "PSADT.UserInterface.Dialogs.DialogPosition"
+      },
+      {
+        "name": "BlockExecution",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PromptToSave",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PersistPrompt",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "MinimizeWindows",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoMinimizeWindows",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NotTopMost",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "AllowMove",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "CustomText",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "CheckDiskSpace",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "RequiredDiskSpace",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Nullable[System.UInt32]"
+      },
+      {
+        "name": "Title",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Subtitle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Start-ADTMsiProcess",
+    "parameters": [
+      {
+        "name": "Action",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Install",
+          "Uninstall",
+          "Patch",
+          "Repair",
+          "ActiveSetup"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "FilePath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Transforms",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "ArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "AdditionalArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "LogFileName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ProductCode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Guid"
+      },
+      {
+        "name": "InstalledApplication",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.Types.InstalledApplication"
+      },
+      {
+        "name": "SecureArgumentList",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "WorkingDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Patches",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "RunAsActiveUser",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.Module.RunAsActiveUser"
+      },
+      {
+        "name": "UseLinkedAdminToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseHighestAvailableToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "InheritEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DenyUserTermination",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseUnelevatedToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExpandEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "LoggingOptions",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "RepairMode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Repair",
+          "Reinstall"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "RepairFromSource",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SkipMSIAlreadyInstalledCheck",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "IncludeUpdatesAndHotfixes",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SuccessExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "RebootExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "IgnoreExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "PriorityClass",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Idle",
+          "BelowNormal",
+          "Normal",
+          "AboveNormal",
+          "High",
+          "RealTime"
+        ],
+        "type": "System.Diagnostics.ProcessPriorityClass"
+      },
+      {
+        "name": "ExitOnProcessFailure",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoDesktopRefresh",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoWait",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Start-ADTMsiProcessAsUser",
+    "parameters": [
+      {
+        "name": "Username",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Security.Principal.NTAccount"
+      },
+      {
+        "name": "Action",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Install",
+          "Uninstall",
+          "Patch",
+          "Repair",
+          "ActiveSetup"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "FilePath",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Transforms",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "ArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "AdditionalArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "LogFileName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ProductCode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Guid"
+      },
+      {
+        "name": "InstalledApplication",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.Types.InstalledApplication"
+      },
+      {
+        "name": "SecureArgumentList",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "WorkingDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Patches",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "UseLinkedAdminToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseHighestAvailableToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "InheritEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExpandEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DenyUserTermination",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "LoggingOptions",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "RepairMode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Repair",
+          "Reinstall"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "RepairFromSource",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SkipMSIAlreadyInstalledCheck",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "IncludeUpdatesAndHotfixes",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SuccessExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "RebootExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "IgnoreExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "PriorityClass",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Idle",
+          "BelowNormal",
+          "Normal",
+          "AboveNormal",
+          "High",
+          "RealTime"
+        ],
+        "type": "System.Diagnostics.ProcessPriorityClass"
+      },
+      {
+        "name": "ExitOnProcessFailure",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoDesktopRefresh",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoWait",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Start-ADTMspProcess",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AdditionalArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "RunAsActiveUser",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.Module.RunAsActiveUser"
+      },
+      {
+        "name": "UseLinkedAdminToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseHighestAvailableToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "InheritEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DenyUserTermination",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseUnelevatedToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExpandEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Start-ADTMspProcessAsUser",
+    "parameters": [
+      {
+        "name": "Username",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Security.Principal.NTAccount"
+      },
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "AdditionalArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "UseLinkedAdminToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseHighestAvailableToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "InheritEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExpandEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DenyUserTermination",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Start-ADTProcess",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "SecureArgumentList",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "WorkingDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "RunAsActiveUser",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.Module.RunAsActiveUser"
+      },
+      {
+        "name": "UseLinkedAdminToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseHighestAvailableToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "InheritEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DenyUserTermination",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseUnelevatedToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseShellExecute",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Verb",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ExpandEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "WindowStyle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Normal",
+          "Hidden",
+          "Minimized",
+          "Maximized"
+        ],
+        "type": "System.Diagnostics.ProcessWindowStyle"
+      },
+      {
+        "name": "CreateNoWindow",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "StreamEncoding",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Text.Encoding"
+      },
+      {
+        "name": "NoStreamLogging",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "WaitForMsiExec",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "MsiExecWaitTime",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "WaitForChildProcesses",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "KillChildProcessesWithParent",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Timeout",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "TimeoutAction",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "SilentlyContinue",
+          "Continue",
+          "Inquire",
+          "Stop",
+          "Suspend",
+          "Ignore"
+        ],
+        "type": "System.Management.Automation.ActionPreference"
+      },
+      {
+        "name": "NoTerminateOnTimeout",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SuccessExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "RebootExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "IgnoreExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "PriorityClass",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Idle",
+          "BelowNormal",
+          "Normal",
+          "AboveNormal",
+          "High",
+          "RealTime"
+        ],
+        "type": "System.Diagnostics.ProcessPriorityClass"
+      },
+      {
+        "name": "ExitOnProcessFailure",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoWait",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Start-ADTProcessAsUser",
+    "parameters": [
+      {
+        "name": "Username",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Security.Principal.NTAccount"
+      },
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "SecureArgumentList",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "WorkingDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "UseLinkedAdminToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "UseHighestAvailableToken",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "InheritEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "ExpandEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DenyUserTermination",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "WindowStyle",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Normal",
+          "Hidden",
+          "Minimized",
+          "Maximized"
+        ],
+        "type": "System.Diagnostics.ProcessWindowStyle"
+      },
+      {
+        "name": "CreateNoWindow",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "StreamEncoding",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Text.Encoding"
+      },
+      {
+        "name": "NoStreamLogging",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "WaitForMsiExec",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "MsiExecWaitTime",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "WaitForChildProcesses",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "KillChildProcessesWithParent",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "Timeout",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "TimeoutAction",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "SilentlyContinue",
+          "Continue",
+          "Inquire",
+          "Stop",
+          "Suspend",
+          "Ignore"
+        ],
+        "type": "System.Management.Automation.ActionPreference"
+      },
+      {
+        "name": "NoTerminateOnTimeout",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SuccessExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "RebootExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "IgnoreExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "PriorityClass",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Idle",
+          "BelowNormal",
+          "Normal",
+          "AboveNormal",
+          "High",
+          "RealTime"
+        ],
+        "type": "System.Diagnostics.ProcessPriorityClass"
+      },
+      {
+        "name": "ExitOnProcessFailure",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "NoWait",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Start-ADTServiceAndDependencies",
+    "parameters": [
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "InputObject",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.ServiceProcess.ServiceController"
+      },
+      {
+        "name": "SkipDependentServices",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PendingStatusWait",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Stop-ADTServiceAndDependencies",
+    "parameters": [
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "InputObject",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.ServiceProcess.ServiceController"
+      },
+      {
+        "name": "SkipDependentServices",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PendingStatusWait",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Test-ADTBattery",
+    "parameters": [
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTCallerIsAdmin",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTEspActive",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTMicrophoneInUse",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTModuleInitialized",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTMSUpdates",
+    "parameters": [
+      {
+        "name": "KbNumber",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTMutexAvailability",
+    "parameters": [
+      {
+        "name": "MutexName",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "MutexWaitTime",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.TimeSpan"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTNetworkConnection",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTOobeCompleted",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTPowerPoint",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTRegistryValue",
+    "parameters": [
+      {
+        "name": "Key",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Name",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Object"
+      },
+      {
+        "name": "SID",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "Wow6432Node",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTServiceExists",
+    "parameters": [
+      {
+        "name": "Name",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "UseCIM",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTSessionActive",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Test-ADTUserIsBusy",
+    "parameters": [],
+    "hasReturnValue": true
+  },
+  {
+    "name": "Unblock-ADTAppExecution",
+    "parameters": [
+      {
+        "name": "Tasks",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "Microsoft.Management.Infrastructure.CimInstance[]"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Uninstall-ADTApplication",
+    "parameters": [
+      {
+        "name": "InstalledApplication",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "PSADT.Types.InstalledApplication[]"
+      },
+      {
+        "name": "Name",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "NameMatch",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Contains",
+          "Exact",
+          "Wildcard",
+          "Regex"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "ProductCode",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Guid[]"
+      },
+      {
+        "name": "ApplicationType",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "All",
+          "MSI",
+          "EXE"
+        ],
+        "type": "System.String"
+      },
+      {
+        "name": "IncludeUpdatesAndHotfixes",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "FilterScript",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Management.Automation.ScriptBlock"
+      },
+      {
+        "name": "ArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "AdditionalArgumentList",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "SecureArgumentList",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "LoggingOptions",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "LogFileName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "WaitForChildProcesses",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "KillChildProcessesWithParent",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "SuccessExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "RebootExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.Int32[]"
+      },
+      {
+        "name": "IgnoreExitCodes",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "ExitOnProcessFailure",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Unregister-ADTDll",
+    "parameters": [
+      {
+        "name": "FilePath",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Update-ADTDesktop",
+    "parameters": [],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Update-ADTEnvironmentPsProvider",
+    "parameters": [
+      {
+        "name": "LoadLoggedOnUserEnvironmentVariables",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Update-ADTGroupPolicy",
+    "parameters": [],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Write-ADTLogEntry",
+    "parameters": [
+      {
+        "name": "Message",
+        "mandatory": true,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String[]"
+      },
+      {
+        "name": "Severity",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "Information",
+          "Warning",
+          "Error"
+        ],
+        "type": "PSADT.Module.LogSeverity"
+      },
+      {
+        "name": "Source",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "ScriptSection",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "LogType",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "CMTrace",
+          "Legacy"
+        ],
+        "type": "PSADT.Module.LogStyle"
+      },
+      {
+        "name": "LogFileDirectory",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "LogFileName",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      },
+      {
+        "name": "HostLogStream",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [
+          "None",
+          "Verbose",
+          "Warning",
+          "Error"
+        ],
+        "type": "PSADT.Module.HostLogStream"
+      },
+      {
+        "name": "PassThru",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      },
+      {
+        "name": "DebugMessage",
+        "mandatory": false,
+        "isSwitch": true,
+        "validSet": [],
+        "type": "System.Management.Automation.SwitchParameter"
+      }
+    ],
+    "hasReturnValue": false
+  },
+  {
+    "name": "Add-PSScript",
+    "parameters": [
+      {
+        "name": "ScriptBlock",
+        "mandatory": false,
+        "isSwitch": false,
+        "validSet": [],
+        "type": "System.String"
+      }
+    ],
+    "hasReturnValue": false
+  }
+]

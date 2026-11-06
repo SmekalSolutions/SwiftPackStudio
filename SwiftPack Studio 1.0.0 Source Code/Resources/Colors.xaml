@@ -1,0 +1,58 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Primary Colors -->
+    <Color x:Key="PrimaryDarkColor">#1A1D2E</Color>
+    <Color x:Key="PrimaryColor">#242740</Color>
+    <Color x:Key="SidebarColor">#1E2235</Color>
+    <Color x:Key="AccentBlueColor">#4F8EF7</Color>
+    <Color x:Key="AccentGreenColor">#3ECFA0</Color>
+    <Color x:Key="AccentOrangeColor">#F7934F</Color>
+    <Color x:Key="AccentPurpleColor">#9B6CF7</Color>
+    <Color x:Key="AccentRedColor">#F7504F</Color>
+    <Color x:Key="AccentTealColor">#4FD6F7</Color>
+    <Color x:Key="AccentYellowColor">#F7D54F</Color>
+    <Color x:Key="TextPrimaryColor">#EAEDF5</Color>
+    <Color x:Key="TextSecondaryColor">#8B92A9</Color>
+    <Color x:Key="CardColor">#2C3154</Color>
+    <Color x:Key="CardHoverColor">#333966</Color>
+    <Color x:Key="BorderColor">#3A4168</Color>
+    <Color x:Key="InputBackgroundColor">#1A1D2E</Color>
+    <Color x:Key="SeparatorColor">#2E3355</Color>
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="PrimaryDarkBrush" Color="{StaticResource PrimaryDarkColor}"/>
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="SidebarBrush" Color="{StaticResource SidebarColor}"/>
+    <SolidColorBrush x:Key="AccentBlueBrush" Color="{StaticResource AccentBlueColor}"/>
+    <SolidColorBrush x:Key="AccentGreenBrush" Color="{StaticResource AccentGreenColor}"/>
+    <SolidColorBrush x:Key="AccentOrangeBrush" Color="{StaticResource AccentOrangeColor}"/>
+    <SolidColorBrush x:Key="AccentPurpleBrush" Color="{StaticResource AccentPurpleColor}"/>
+    <SolidColorBrush x:Key="AccentRedBrush" Color="{StaticResource AccentRedColor}"/>
+    <SolidColorBrush x:Key="AccentTealBrush" Color="{StaticResource AccentTealColor}"/>
+    <SolidColorBrush x:Key="AccentYellowBrush" Color="{StaticResource AccentYellowColor}"/>
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextPrimaryColor}"/>
+    <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextSecondaryColor}"/>
+    <SolidColorBrush x:Key="CardBrush" Color="{StaticResource CardColor}"/>
+    <SolidColorBrush x:Key="CardHoverBrush" Color="{StaticResource CardHoverColor}"/>
+    <SolidColorBrush x:Key="BorderBrush_" Color="{StaticResource BorderColor}"/>
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{StaticResource InputBackgroundColor}"/>
+    <SolidColorBrush x:Key="SeparatorBrush" Color="{StaticResource SeparatorColor}"/>
+
+    <!-- Gradient Brushes -->
+    <LinearGradientBrush x:Key="TitleBarGradient" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#1A1D2E" Offset="0"/>
+        <GradientStop Color="#242740" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="AccentGradientBlue" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#4F8EF7" Offset="0"/>
+        <GradientStop Color="#6F5CF7" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="AccentGradientGreen" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#3ECFA0" Offset="0"/>
+        <GradientStop Color="#4FD6F7" Offset="1"/>
+    </LinearGradientBrush>
+
+</ResourceDictionary>

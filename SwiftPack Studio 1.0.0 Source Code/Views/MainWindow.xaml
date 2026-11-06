@@ -1,0 +1,345 @@
+<Window x:Class="SwiftPack.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SwiftPack Studio 1.0.0"
+        Height="820" Width="1280"
+        MinHeight="600" MinWidth="900"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource WindowBgBrush}"
+        WindowState="Maximized"
+        AllowDrop="True"
+        Drop="MainWindow_Drop">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- TOP NAV BAR -->
+        <Border Grid.Row="0" Background="{DynamicResource NavBarBgBrush}"
+                BorderBrush="{DynamicResource BorderMainBrush}" BorderThickness="0,0,0,1">
+            <Grid Margin="4,0">
+                <Grid.Resources>
+                    <Style x:Key="MiniNavBtn" TargetType="Button">
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Margin" Value="2,2,2,2"/>
+                        <Setter Property="Height" Value="26"/>
+                        <Setter Property="MinWidth" Value="0"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="bg" Background="Transparent" CornerRadius="6" Padding="6,2">
+                                        <ContentPresenter VerticalAlignment="Center"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="bg" Property="Background" Value="{DynamicResource NavHoverBrush}"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollViewer Grid.Column="0"
+                              HorizontalScrollBarVisibility="Auto"
+                              VerticalScrollBarVisibility="Hidden"
+                              VerticalAlignment="Center"
+                              Margin="8,0">
+                    <StackPanel Orientation="Horizontal">
+
+                        <!-- 7. Auto Package -->
+                        <Button x:Name="BtnAutoPackage" Style="{StaticResource TopNavButtonStyle}"
+                                Tag="Active"
+                                Click="NavButton_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconAutoBrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="⚡" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Auto" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Package" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 1b. Edit MSI -->
+                        <Button x:Name="BtnMstEditor" Style="{StaticResource TopNavButtonStyle}"
+                                Click="NavButton_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconMSTBrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="🛠" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Edit" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="MSI" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+
+                        <!-- 0. Source Validation -->
+                        <Button x:Name="BtnSourceValidation" Style="{StaticResource TopNavButtonStyle}"
+                                Click="NavButton_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconMSTBrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="🔬" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Validate" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Source" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 2. Create Package -->
+                        <Button x:Name="BtnCreatePackage" Style="{StaticResource TopNavButtonStyle}"
+                                Click="NavButton_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconPkgBrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="📦" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Create" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Package" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 3. Execute Package -->
+                        <Button x:Name="BtnExecutePackage" Style="{StaticResource TopNavButtonStyle}"
+                                Click="NavButton_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconExecBrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="▶️" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Execute" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Package" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 8. Validate Package (moved to after Execute Package) -->
+                        <Button x:Name="BtnPerformQA" Style="{StaticResource TopNavButtonStyle}"
+                                Click="NavButton_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconQABrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="✅" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Validate" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Package" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 5. Create Intunewin -->
+                        <Button x:Name="BtnCreateIntunewin" Style="{StaticResource TopNavButtonStyle}"
+                                Click="NavButton_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconIntuneBrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="☁️" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Create" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Intunewin" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+                        <!-- 6. Publish Package -->
+                        <Button x:Name="BtnPublishDeploy" Style="{StaticResource TopNavButtonStyle}"
+                                Click="NavButton_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconPublishBrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="🚀" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Publish" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Package" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+
+                        <!-- 9. Create Document -->
+                        <Button x:Name="BtnTabDocument" Style="{StaticResource TopNavButtonStyle}"
+                                Click="BtnTabDocument_Click">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Border CornerRadius="7"
+                                        Width="30" Height="30" Margin="0,0,8,0">
+                                    <Border.Style>
+                                        <Style TargetType="Border" BasedOn="{StaticResource NavIconTileStyle}">
+                                            <Setter Property="Background" Value="{DynamicResource NavIconQABrush}"/>
+                                        </Style>
+                                    </Border.Style>
+                                    <TextBlock Text="📝" FontSize="15"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Create" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Document" FontSize="12" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+                <!-- Sign in to Intune (2 lines), placed right after Create Document.
+                     Drives the Publish page's Intune session, usable from any page. -->
+                <Button x:Name="BtnSignInIntune" Grid.Column="1" Style="{StaticResource MiniNavBtn}"
+                        Height="Auto" VerticalAlignment="Center" Margin="6,4,6,4"
+                        Click="BtnSignInIntune_Click"
+                        ToolTip="Sign in to Intune now so the next publish does not prompt for login">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock x:Name="TxtIntuneSignIcon" Text="🔑" FontSize="13" Margin="0,0,6,0" VerticalAlignment="Center"
+                                   Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="TxtIntuneSignLine1" Text="Sign in to" FontSize="12" FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                            <TextBlock x:Name="TxtIntuneSignLine2" Text="Intune" FontSize="12" FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+
+                <!-- Right side: Close / Dark and Help / New -->
+                <Grid Grid.Column="2" VerticalAlignment="Center" Margin="4,4,6,4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Row 1, Col 1: Close (asks for confirmation, then exits) -->
+                    <Button x:Name="BtnClose" Grid.Row="0" Grid.Column="0" Style="{StaticResource MiniNavBtn}"
+                            Click="BtnClose_Click" ToolTip="Close SwiftPack Studio">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="⏻" FontSize="13" Margin="0,0,6,0" VerticalAlignment="Center"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                            <TextBlock Text="Close" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Row 1, Col 2: Theme toggle (shows the theme the user can switch TO) -->
+                    <Button x:Name="BtnThemeToggle" Grid.Row="0" Grid.Column="1" Style="{StaticResource MiniNavBtn}"
+                            Click="BtnThemeToggle_Click" ToolTip="Switch to Dark theme">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock x:Name="TxtThemeIcon" Text="🌙" FontSize="13" Margin="0,0,6,0" VerticalAlignment="Center"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                            <TextBlock x:Name="TxtThemeLabel" Text="Dark" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Row 2, Col 2: Help (below Dark) -->
+                    <Button x:Name="BtnHelp" Grid.Row="1" Grid.Column="1" Style="{StaticResource MiniNavBtn}"
+                            Click="NavButton_Click" ToolTip="Help">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="❓" FontSize="13" Margin="0,0,6,0" VerticalAlignment="Center"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                            <TextBlock Text="Help" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Row 2, Col 1: New (below Close; resets all sections except Auto Package) -->
+                    <Button x:Name="BtnNew" Grid.Row="1" Grid.Column="0" Style="{StaticResource MiniNavBtn}"
+                            Click="BtnNew_Click" ToolTip="Start a new session (keeps Auto Package)">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="✚" FontSize="13" Margin="0,0,6,0" VerticalAlignment="Center"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                            <TextBlock Text="New" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        </StackPanel>
+                    </Button>
+
+                </Grid>
+            </Grid>
+        </Border>
+
+        <!-- CONTENT AREA -->
+        <Frame x:Name="MainFrame" Grid.Row="1"
+               NavigationUIVisibility="Hidden"
+               Background="Transparent"/>
+
+        <!-- INTUNE SIGN-IN PROGRESS BAR: overlays the top of the content strip (see arrow),
+             so showing it does not push the rows down. Shown only while signing in. -->
+        <ProgressBar x:Name="IntuneProgressBar" Grid.Row="1"
+                     VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                     Height="4" Margin="0" IsIndeterminate="True"
+                     BorderThickness="0" Background="Transparent"
+                     Panel.ZIndex="10" Visibility="Collapsed"/>
+
+    </Grid>
+</Window>
